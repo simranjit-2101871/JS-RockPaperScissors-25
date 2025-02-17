@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap');
+
+  body {
+    margin: 0;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+   
+    font-weight: 600;
+    background: radial-gradient(circle, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+    color: hsl(229, 25%, 31%);
+    height: 100vh;
+  }
+
+  .container-header{
+    text-align: center;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 3px solid hsl(217, 16%, 45%);
+    border-radius: 15px;
+    padding: 20px;
+
+    max-width: 50%;
+    margin: 1px auto 60px;
+  }
+
+  .header-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+    text-transform: uppercase;
+  }
+
+  .score {
+    background: white;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px 20px;
+  }
+
+  .score h2 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: hsl(229, 64%, 46%);
+  }
+
+  .score p {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0;
+    color: hsl(229, 25%, 31%);
+  }
+
+
+  .main-container{
+    background-image: url('../FILES/bg-triangle.svg');
+    background-repeat:no-repeat;
+    background-position: center;
+  }
+
+  .choices {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 61px;
+    /*flex-wrap: wrap;*/
+    /*background-image: url("../FILES/bg-triangle.svg");*/
+
+  }
+  .paper-column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .scissors-column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+  #user-para,#code-para{
+    display: none;
+    color: white;
+    font-size:25px;
+    margin-top: 7px;
+  }
+
+
+  .choice {
+    width: 126px;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: whitesmoke;
+    cursor: pointer;
+    transition: transform 0.2s;
+    
+   
+
+  }
+
+
+  .Paper {
+    border: 18px solid red;
+  }
+
+  .Rock {
+    border: 18px solid yellow;
+    margin: auto;
+  }
+
+  .Scissors {
+    border: 18px solid greenyellow;
+  }
+  
+
+  .js-choice {
+    width: 126px ;
+    height: 130px;
+    display: none;
+    justify-content: center ;
+    align-items: center ;
+    border-radius: 50% ;
+    background: whitesmoke;
+    cursor: pointer;
+    border: 18px solid blueviolet;
+    background-repeat: no-repeat;
+    background-position: center;
+
+
+  }
+  .choice-exempt{
+    margin-top:24px;
+  }
+
+.reset{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+  .win,
+  .draw,
+  .loose {
+    color: white;
+    max-height: 21px;
+    margin-bottom: 20px;
+    display: block;
+    font-size: 33px;
+  }
+
+  .try-again {
+    width: 117px;
+    height: 60px;
+    border: 4px solid white;
+    border-radius: 7px;
+    cursor: pointer;
+   font-size: 18px;
+  }
+
+
+
+
+  .choice:active {
+    transform: scale(0.95);
+  }
+
+  .rules-btn {
+    background: none;
+    color: white;
+    border: 2px solid white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+    float: right;
+    margin-top: 235px;
+    position:relative;
+  }
+
+  .rules-btn:hover {
+    background: white;
+    color: hsl(229, 25%, 31%);
+  }
+
+  .rules-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .rules-modal.active {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .rules-content {
+    position: relative; /* Ensures children (like the close button) position relative to it */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%; /* Adjust based on your layout */
+    max-width: 500px; /* Ensure it doesn't get too big */
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .rules-content img {
+    max-width: 100%;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 10px;  /* Positioning from the top */
+    right: 10px; /* Positioning from the right */
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 5px;
+  }
+
+
+
+
+  @media screen and (max-width: 540px) {
+    /*.paper-column{
+      order: 1 !important;
+    }
+    .scissors-column{
+      order:2 !important;
+    }
+    .reset{
+      order:3 !important;
+    }
+      
+    .choices{
+      
+      gap:41px;
+      flex-wrap: nowrap !important;
+    } */
+    
+    .choice-exempt{
+      margin-top: 1px;
+      margin-left:12px;
+    }
+  
+  }
+  
+  @media screen  and (max-width: 768px){
+    .rules-btn{
+      display: block;
+      margin: 235px auto; /* Centers the button horizontally */
+      float: none; /* Remove float as it's not needed */
+
+    }
+    .reset{
+      position: absolute;
+      margin-top: 411px;
+    }
+
+    #user-para,#code-para{
+      position: absolute;
+      margin-top :185px;
+    }
+  }
+  @media screen  and (max-width: 435px){
+    .choices{
+      gap: 19px !important;;
+    }
+  }
+    
+  
+ 
