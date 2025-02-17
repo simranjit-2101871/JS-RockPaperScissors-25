@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="./STYLE/style.css">
+</head>
+
+<body>
+    
+        <div class="container-header">
+            <div class="header">
+                <div class="header-title"><img src="./FILES/logo.svg" alt="no image"></div>
+                <div class="score">
+                    <h2>Score</h2>
+                    <p id="user-score">0</p>
+                </div>
+            </div>
+        </div>
+
+    <div class="main-container">
+        <div class="choices">
+            <div class="paper-column">
+                <p id="user-para">User choice</p>
+                <div id="paper-choice" class="choice Paper" id="paper-choice"><img src="./FILES/icon-paper.svg"></div>
+                <p id="user-para">User choice</p>
+
+            </div>
+
+
+            <div class="reset"></div>
+            <!--<div class="js-choice"></div>-->
+
+            <div class="scissors-column">
+                <p id="code-para">House choice</p>
+                <div id="scissors-choice" class="choice Scissors"><img src="./FILES/icon-scissors.svg "></div>
+                <!--<div id="reset_1" class="reset">-->
+                <div class="js-choice"></div>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="choice-exempt">
+            <div id="rock-choice" class=" choice Rock "><img src="./FILES/icon-rock.svg"></div>
+
+        </div>
+    </div>
+
+    <div class="btn"><button class="rules-btn">Rules</button></div>
+
+
+    <div class="rules-modal" id="rulesModal">
+        <div class="rules-content">
+            <button class="close-btn" id="closeRules">&times;</button>
+            <img src="./FILES/image-rules.svg" alt="Rules">
+        </div>
+    </div>
+
+
+
+    <script src="./SCRIPT/script.js" defer></script>
+</body>
+
+</html>
